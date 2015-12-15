@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xml>
+
+
+
+	<channels>		
+
+		<channel>
+			<param name="id" value="35" />
+			<param name="name" value="txmsdk" />
+			<param name="sdk" value="txmsdk" />
+			<param name="desc" value="腾讯应用宝(MSDK)" />
+			<param name="suffix" value="com.tencent.tmgp.lovefires.player" />
+			<param name="splash" value="0" />
+			<param name="splash_copy_to_unity" value="0" />
+
+			<sdk-params>
+
+				<param desc="QQAppID" name="WG_QQAPPID" value="1104556695" />
+				<param desc="QQAppKey" name="WG_QQAPPKEY" value="DDebGjkcpZzO4GEM" />  
+				<param desc="微信AppID" name="WG_WXAPPID" value="wx07dc001b46d4092c" />
+				<param desc="微信AppKey" name="WG_MSDKKEY" value="c4cb80dd6384274aa6f3e4d1b524087c" /> 
+				<param desc="OfferId,一般就是QQ AppId" name="WG_OFFERID" value="1104556695" />
+				<param desc="test(测试环境)|release(正式环境)" name="WG_ENV" value="test" />  
+				<param desc="是否开启日志 true|false" name="WG_DEBUG_MODE" value="true" />
+				<param desc="是否定额支付 true|false" name="WG_FIXEDPAY" value="true" /> 
+				<param desc="支付界面游戏币Icon名称，drawable资源目录下的文件名称，不带后缀" name="WG_COIN_ICON_NAME" value="coin_icon" />	
+
+				<param desc="true|false" name="WG_MULTI_SERVERS" value="false" />	
+				<param desc="u8server处理查询充值逻辑的地址" name="WG_PAY_URL" value="http://192.168.18.9:8080/pay/txmsdk/charge" />	
+
+			</sdk-params>
+
+			<sdk-version>
+				<versionCode>1</versionCode>   
+				<versionName>2.8.1</versionName>
+			</sdk-version>				
+
+		</channel>						
+
+		</channels>
+
+</xml>

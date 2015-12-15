@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <permissionConfig>
+        
+        <!-- TODO SDK接入必须权限模块 START -->
+		<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+		<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+		<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+		<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+		<uses-permission android:name="android.permission.GET_TASKS" />
+		<uses-permission android:name="android.permission.INTERNET" />
+		<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+		<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+		<uses-permission android:name="android.permission.RESTART_PACKAGES" />
+		<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+		<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+		
+		<!-- 登录上报时需要带设备名称, 通过蓝牙模块来获取设备名称 -->
+		<uses-permission android:name="android.permission.BLUETOOTH" />
+		<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+		<!-- TODO SDK接入 必须权限模块 END -->
+		<uses-permission android:name="android.permission.WRITE_APN_SETTINGS" />  
+        
+    </permissionConfig>
+    
+    <applicationConfig keyword="com.tencent.tauth.AuthActivity" >
+		  <!-- TODO SDK接入 QQ接入配置 START -->
+		  <activity
+		      android:name="com.tencent.tauth.AuthActivity"
+		      android:launchMode="singleTask"
+		      android:noHistory="true" >
+		      <intent-filter>
+		          <action android:name="android.intent.action.VIEW" />
+		          <category android:name="android.intent.category.DEFAULT" />
+		          <category android:name="android.intent.category.BROWSABLE" />
+		          <!-- 通过脚本添加 <data android:scheme="tencent游戏的手Q appid" />-->
+		      </intent-filter>
+		  </activity>
+		  <activity
+		      android:name="com.tencent.connect.common.AssistActivity"
+		      android:configChanges="orientation|screenSize|keyboardHidden"
+		      android:screenOrientation="portrait"
+		      android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+		  <!-- TODO SDK接入 QQ接入配置 END -->
+		  
+		<!-- TODO SDK接入 微信接入配置 START -->
+		<!-- 注意：此处应改为 游戏包名.wxapi.WXEntryActivity -->
+		<activity
+		    android:name=".wxapi.WXEntryActivity" 
+		    android:excludeFromRecents="true"
+		    android:exported="true"
+		    android:label="WXEntryActivity"
+		    android:launchMode="singleTop"
+		    android:taskAffinity=".diff" >	    <!-- 注意：此处应改为 游戏包名.diff -->
+		    <intent-filter>
+		        <action android:name="android.intent.action.VIEW" />
+		        <category android:name="android.intent.category.DEFAULT" />
+		    </intent-filter>
+		</activity>
+		<!-- TODO SDK接入 微信接入配置 END -->		
+		
+		<activity
+            android:name="com.u8.sdk.ChooseLoginTypeActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="landscape"
+            android:theme="@style/dialogcustom" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+    </applicationConfig>
+    
+</manifest>

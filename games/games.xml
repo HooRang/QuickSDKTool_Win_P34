@@ -1,0 +1,24 @@
+<xml>
+
+<games>
+
+	<game>
+		<param name="appName" value="game1" />
+		<param name="appID" value="1" />
+		<param name="appKey" value="f32fdc02123a82524eb4ea95e1383d0b" />
+		<param name="appDesc" value="测试游戏1" />
+		<param name="orientation" value="landscape" desc="游戏是横屏还是竖屏(landscape|portrait),不配置默认是横屏" />
+		<param name="cpuSupport" value="armeabi|armeabi-v7a"/>
+	</game> 
+
+	<game>
+		<param name="appName" value="game2" />
+		<param name="appID" value="2" />
+		<param name="appKey" value="f32fdc02123a82524eb4ea95e1383d0b" />
+		<param name="appDesc" value="测试游戏2" />
+		<param name="orientation" value="landscape" desc="游戏是横屏还是竖屏(landscape|portrait),不配置默认是横屏" />		
+		<param name="cpuSupport" value="armeabi|armeabi-v7a|x86|mips"/>		
+	</game>	
+</games>
+
+</xml>
